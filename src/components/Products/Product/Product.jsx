@@ -9,7 +9,7 @@ const Product = ({product,onAddtoCart}) => {
     return (
         <Card className={classes.root}>
            <CardMedia className={classes.media}
-           image={product.media.source} title={product.name}/> 
+               image={product.media.source} title={product.name}/> 
            <CardContent>
                <div className={classes.CardContent}>
                 <Typography variant='h5' gutterBottom>

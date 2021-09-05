@@ -33,16 +33,15 @@ const AddressForm = ({ checkoutToken, next }) => {
         setShippingOption(options[0].id);
     };
     useEffect(() => {
-        fetchShippingCountries(checkoutToken.id);
-    }, [])
+        fetchShippingCountries(checkoutToken.id); // eslint-disable-next-line
+    }, []) 
 
     useEffect(() => {
-        if (shippingCountry) fetchSubdivisions(shippingCountry)
-    }, [shippingCountry])
-
+        if (shippingCountry) fetchSubdivisions(shippingCountry) // eslint-disable-next-line
+    }, [shippingCountry]) 
     useEffect(() => {
-        if (shippingSubdivision) fetchShippingOptions(checkoutToken.id, shippingCountry, shippingSubdivision);
-    }, [shippingSubdivision]);
+        if (shippingSubdivision) fetchShippingOptions(checkoutToken.id, shippingCountry, shippingSubdivision);  // eslint-disable-next-line
+    }, [shippingSubdivision]); 
 
     //console.log(Object.entries(shippingCountries).map(([code,name])=>({id:code,label:name})) ) 
     const countries = Object.entries(shippingCountries).map(([code, name]) => ({ id: code, label: name }));

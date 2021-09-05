@@ -41,7 +41,7 @@ const App = () => {
     // console.log(cart);
     const refreshCart = async () => {
         const newCart = await commerce.cart.refresh();
-          console.log("heelo i am refresh cart");
+         // console.log("heelo i am refresh cart");
         setCart(newCart);
       };
 
@@ -50,12 +50,12 @@ const App = () => {
             const incomingOrder = await commerce.checkout.capture(checkoutTokenId, newOrder);
 
             setOrder(incomingOrder);
-             console.log("handleCaptureCheckout");
+             //console.log("handleCaptureCheckout");
             refreshCart();
         } catch (error) {
            refreshCart();
             setErrorMessage(error.data.error.message);
-            console.log("handleCaptureCheckout error part");
+           // console.log("handleCaptureCheckout error part");
         }
     };
     return (

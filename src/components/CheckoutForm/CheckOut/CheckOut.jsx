@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { CssBaseline, Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider, Button } from '@material-ui/core';
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import useStyles from './styles'
 
 import PaymentForm from '../PaymentForm';
@@ -23,7 +23,7 @@ const CheckOut = ({ cart, order, onCaptureCheckout, error }) => {
         nextStep();
     }
 
-    console.log(shippingData);
+    //console.log(shippingData);
     const Form = () => activeStep === 0
         ? <AddressForm checkoutToken={checkoutToken} next={next} />
         : <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken} prevStep={prevStep} onCaptureCheckout={onCaptureCheckout} nextStep={nextStep} />
@@ -62,10 +62,10 @@ const CheckOut = ({ cart, order, onCaptureCheckout, error }) => {
         }
     }
     useEffect(() => {
-
-        generateToken();
+                              // eslint-disable-next-line
+        generateToken();         // eslint-disable-next-line
     }, [])
-    console.log(checkoutToken);
+    //console.log(checkoutToken);
     return (
         <>
             <CssBaseline />
