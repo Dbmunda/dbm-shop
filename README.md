@@ -24,5 +24,5 @@
 
 ## Live Demo
 
-[Live Demo Link](http://dbm-shop.tribematrimony.in)
+[Live Demo Link](http://google.com)
 
